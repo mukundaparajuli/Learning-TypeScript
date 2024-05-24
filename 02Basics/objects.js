@@ -1,15 +1,16 @@
-var User = {
+"use strict";
+// const User = {
+//   name: "Mukunda Parajuli",
+//   email: "mukundaparajuli@gmail.com",
+//   age: 20,
+//   isActive: true,
+// };
+Object.defineProperty(exports, "__esModule", { value: true });
+var myUser = {
+    _id: "12345",
     name: "Mukunda Parajuli",
-    email: "mukundaparajuli@gmail.com",
-    age: 20,
-    isActive: true,
+    email: "m@m.com",
+    age: 21,
 };
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
-}
-var newUser = { name: "Ramesh", isPaid: false };
-createUser(newUser);
-function createCourse() {
-    return { name: "Harihar", price: 4000 };
-}
-createCourse();
+function createUser(U) { }
+createUser(myUser);
