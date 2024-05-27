@@ -20,7 +20,7 @@
 // mukunda.#age;
 
 class User {
-  private courseCount: number = 1;
+  protected courseCount: number = 1;
   constructor(public name: string, public age: number, public email: string) {}
   get getAppleEmail(): string {
     return `apple${this.email}`;
@@ -35,6 +35,13 @@ class User {
       throw new Error("Course no. cannot be less than 1");
     }
     this.courseCount = courseNumber;
+  }
+}
+
+class subUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this.courseCount = 12;
   }
 }
 export {};
