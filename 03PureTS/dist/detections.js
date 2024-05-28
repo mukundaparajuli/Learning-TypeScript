@@ -32,3 +32,25 @@ function isAdminAccount(acc) {
     }
     return false;
 }
+function logValue(val) {
+    if (val instanceof Date) {
+        console.log(val.toUTCString());
+        return;
+    }
+    console.log(val.toLowerCase());
+    return;
+}
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function isBird(pet) {
+    return pet.fly !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        console.log("Fish Food!");
+        return;
+    }
+    console.log("Bird Food!");
+    return;
+}
