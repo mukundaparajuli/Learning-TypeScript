@@ -46,3 +46,45 @@ const identitySeven = <T>(val: T): T => {
 const identityEight = <T>(val: Array<T>): T => {
   return val[4];
 };
+
+// generic class
+
+interface DataBase {
+  name: string;
+  age: number;
+  email: string;
+}
+
+const identityNine = <T, U extends DataBase>(valOne: T, valTwo: U): object => {
+  return {
+    valOne,
+    valTwo,
+  };
+};
+
+identityNine("3", {
+  name: "Mukunda",
+  age: 21,
+  email: "m@m.com",
+  phone: 9849951810, //through this was not defined in the interface of database we can use
+  //                   this bcoz database is just the extention of the type U
+});
+
+interface Quiz {
+  name: string;
+  type: string;
+}
+
+interface Course {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class sellable<T> {
+  public cart: T[] = [];
+
+  addToCart(products: T) {
+    this.cart.push(products);
+  }
+}

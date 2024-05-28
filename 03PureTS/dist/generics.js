@@ -33,3 +33,24 @@ const identitySeven = (val) => {
 const identityEight = (val) => {
     return val[4];
 };
+const identityNine = (valOne, valTwo) => {
+    return {
+        valOne,
+        valTwo,
+    };
+};
+identityNine("3", {
+    name: "Mukunda",
+    age: 21,
+    email: "m@m.com",
+    phone: 9849951810, //through this was not defined in the interface of database we can use
+    //                   this bcoz database is just the extention of the type U
+});
+class sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(products) {
+        this.cart.push(products);
+    }
+}
